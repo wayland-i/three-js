@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js FBX Example</title>
+    <style>
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+
+    <h1>three js!</h1>
+    <!-- importing three js -->
+    <script src="https://threejs.org/build/three.js"></script>
+    <!-- importing fbx loader -->
+    <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
+
+    <!-- creating where 3d scene will be rendered -->
+    <div id="scene-container"></div>
+
+    <script>
+        // Set up scene
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        // Set up renderer
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('scene-container').appendChild(renderer.domElement);
+
+        // Load FBX file
+        var loader = new THREE.FBXLoader();
+        loader.load('path/to/your/model.fbx', function (fbx) {
+            scene.add(fbx);
+        });
+
+        // Set camera position
+        camera.position.z = 5;
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+    
+
+
+
+
+</body>
+</html>
