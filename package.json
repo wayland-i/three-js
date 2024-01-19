@@ -1,0 +1,23 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "I am trying to build with three.js for the first time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayland-i/three-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayland-i/three-js/issues"
+  },
+  "homepage": "https://github.com/wayland-i/three-js#readme",
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}
